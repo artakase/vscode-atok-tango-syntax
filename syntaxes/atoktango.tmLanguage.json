@@ -1,0 +1,190 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "ATOK Tango",
+    "scopeName": "source.atoktango",
+    "patterns": [
+        {
+            "include": "#yorei_header"
+        },
+        {
+            "include": "#tango"
+        }
+    ],
+    "repository": {
+        "comment": {
+            "patterns": [
+                {
+                    "captures": {
+                        "1": {
+                            "name": "punctuation.definition.comment.atoktango"
+                        }
+                    },
+                    "match": "^(!!).*(?=$)",
+                    "name": "comment.line.atoktango"
+                }
+            ]
+        },
+        "part": {
+            "patterns": [
+                {
+                    "match": "(?<=\t)(?:名(?:詞(?:サ変|ザ変|形動)?|サ形動)|固有(?:人[名姓他]|地名|組織|商品|一般)|形(?:容(?:詞[ウイエ]?|動詞)|動タリ)|[カラ](?:行(?:五段(?:特殊)?|[上下]二段)|変動詞)|[ガタバマ]行(?:五段|[上下]二段)|サ(?:行(?:五段|下二段)|変動詞)|ナ(?:行(?:五段(?:特殊)?|下二段)|変動詞)|ワ行(?:五段(?:音便|特殊)?|下二段)|[ダヤ]行[上下]二段|ハ行(?:四段|[上下]二段)|ザ(?:変動詞|行下二段)|一段動詞|顔文字|短縮読み|[冠助]?数詞|副詞|連体詞|接(?:続詞|[頭尾]語)|感動詞|独立語|単漢字|終助詞|\\d{1,2})(?=$|[|｜])",
+                    "name": "support.class.part.atoktango"
+                }
+            ]
+        },
+        "part_with_mark": {
+            "patterns": [
+                {
+                    "match": "(?<=\t)(?:名(?:詞(?:サ変|ザ変|形動)?|サ形動)|固有(?:人[名姓他]|地名|組織|商品|一般)|形(?:容(?:詞[ウイエ]?|動詞)|動タリ)|[カラ](?:行(?:五段(?:特殊)?|[上下]二段)|変動詞)|[ガタバマ]行(?:五段|[上下]二段)|サ(?:行(?:五段|下二段)|変動詞)|ナ(?:行(?:五段(?:特殊)?|下二段)|変動詞)|ワ行(?:五段(?:音便|特殊)?|下二段)|[ダヤ]行[上下]二段|ハ行(?:四段|[上下]二段)|ザ(?:変動詞|行下二段)|一段動詞|顔文字|短縮読み|[冠助]?数詞|副詞|連体詞|接(?:続詞|[頭尾]語)|感動詞|独立語|単漢字|終助詞|\\d{1,2})[*$]?+(?=$|\t)",
+                    "name": "support.class.part.atoktango"
+                }
+            ]
+        },
+        "tango": {
+            "patterns": [
+                {
+                    "match": "(?i)\\A!!ATOK_TANGO_TEXT_HEADER_1(?=$)",
+                    "name": "keyword.control.header.atoktango"
+                },
+                {
+                    "include": "#comment"
+                },
+                {
+                    "captures": {
+                        "1": {
+                            "patterns":
+                            [
+                                {
+                                    "include": "#yomi"
+                                }
+                            ]
+                        },
+                        "2": {
+                            "name": "variable.other.constant.tango.atoktango"
+                        },
+                        "3": {
+                            "patterns": [
+                                {
+                                    "include": "#part_with_mark"
+                                }
+                            ]
+                        },
+                        "4": {
+                            "name": "support.function.comment.atoktango"
+                        },
+                        "5": {
+                            "patterns": [
+                                {
+                                    "match": "(?<=\\t)(?:する|しない)(?=$|\\t)",
+                                    "name": "constant.language.boolean.atoktango"
+                                }
+                            ]
+                        },
+                        "6": {
+                            "name": "variable.parameter. candidate.atoktango"
+                        }
+                    },
+                    "match": "^([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+((?:[^\t]*+\t?+){0,5})",
+                    "name": "meta.tango.definition.atoktango"
+                }
+            ]
+        },
+        "yomi": {
+            "patterns": [
+                {
+                    "match": "(?<=^)[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]*+(?=$|\t)",
+                    "name": "string.yomi.atoktango"
+                }
+            ]
+        },
+        "yomi_after_vertical_bar": {
+            "patterns": [
+                {
+                    "match": "(?<=[|｜])[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]*+(?=$|\t)",
+                    "name": "string.yomi.atoktango"
+                }
+            ]
+        },
+        "yorei": {
+            "patterns": [
+                { "include": "#comment" },
+                {
+                    "begin": "^([^\t]*+)\t?+([^\t|｜]*+)\t?+([^|｜]*+)([|｜]?+)([^\t]*+)\t?+([^\t|｜]*+)\t?+([^|｜]*+)([|｜]?+)",
+                    "beginCaptures": {
+                        "1": {
+                            "patterns": [
+                                {
+                                    "include": "#yomi"
+                                }
+                            ]
+                        },
+                        "2": {
+                            "name": "variable.other.constant.tango.atoktango"
+                        },
+                        "3": {
+                            "patterns": [
+                                {
+                                    "include": "#part"
+                                }
+                            ]
+                        },
+                        "4": {
+                            "name": "keyword.control.separator.atoktango"
+                        },
+                        "5": {
+                            "patterns": [
+                                {
+                                    "include": "#yomi_after_vertical_bar"
+                                }
+                            ]
+                        },
+                        "6": {
+                            "name": "variable.other.constant.tango.atoktango"
+                        },
+                        "7": {
+                            "patterns": [
+                                {
+                                    "include": "#part"
+                                }
+                            ]
+                        },
+                        "8": {
+                            "name": "keyword.control.separator.atoktango"
+                        }
+                    },
+                    "end": "$",
+                    "name": "meta.yorei.definition.atoktango",
+                    "patterns": [
+                        {
+                            "match": "、",
+                            "name": "keyword.control.separator.atoktango"
+                        },
+                        {
+                            "match": "\\b(?:が|を|に|へ|と|で|より|から|の|は|も|助詞(?:一般|なし)|用言(?:連体|一般))\\b",
+                            "name": "support.class.atoktango"
+                        }
+                    ]
+                }
+            ]
+        },
+        "yorei_header": {
+            "patterns": [
+                {
+                    "begin": "(?i)\\A!!ATOK_YOREI_TEXT_HEADER_1(?=$)",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "keyword.control.header.atoktango"
+                        }
+                    },
+                    "end": "\\z",
+                    "name": "meta.block.yorei.atoktango",
+                    "patterns": [
+                        {
+                            "include": "#yorei"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

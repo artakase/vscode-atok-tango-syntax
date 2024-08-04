@@ -1,0 +1,52 @@
+{
+  "name": "atok-tango-syntax",
+  "displayName": "ATOK Tango Syntax",
+  "description": "ATOK 単語・用例ファイル用シンタックス",
+  "version": "0.0.1",
+  "publisher": "artakase",
+  "author": {
+    "name": "TAKASE Arihiro"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/artakase/vscode-atok-tango-syntax",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artakase/vscode-atok-tango-syntax"
+  },
+  "bugs": {
+    "url": "https://github.com/artakase/vscode-atok-tango-syntax/issues"
+  },
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "IME",
+    "Japanese"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+      "[atoktango]": {
+        "editor.insertSpaces": false,
+        "files.encoding": "utf16be",
+        "files.eol": "\r\n"
+      }
+    },
+    "grammars": [
+      {
+        "language": "atoktango",
+        "scopeName": "source.atoktango",
+        "path": "./syntaxes/atoktango.tmLanguage.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "atoktango",
+        "aliases": [ "ATOK Tango", "atoktango" ],
+        "configuration": "./language-configuration.json"
+      }
+    ]
+  }
+}
