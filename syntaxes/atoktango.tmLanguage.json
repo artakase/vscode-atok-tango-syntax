@@ -60,7 +60,12 @@
                             ]
                         },
                         "2": {
-                            "name": "variable.other.constant.tango.atoktango"
+                            "patterns": [
+                                {
+                                    "match": "(?<=\t).{1,100}(?=$|\t)",
+                                    "name": "variable.other.constant.tango.atoktango"
+                                }
+                            ]
                         },
                         "3": {
                             "patterns": [
@@ -70,18 +75,28 @@
                             ]
                         },
                         "4": {
-                            "name": "support.function.comment.atoktango"
+                            "patterns": [
+                                {
+                                    "match": "(?<=\t).{1,100}(?=$|\t)",
+                                    "name": "support.function.comment.atoktango"
+                                }
+                            ]
                         },
                         "5": {
                             "patterns": [
                                 {
-                                    "match": "(?<=\\t)(?:する|しない)(?=$|\\t)",
+                                    "match": "(?<=\t)(?:する|しない)(?=$|\t)",
                                     "name": "constant.language.boolean.atoktango"
                                 }
                             ]
                         },
                         "6": {
-                            "name": "variable.parameter. candidate.atoktango"
+                            "patterns": [
+                                {
+                                    "match": "(?<=\t).{1,100}(?=$|\t)",
+                                    "name": "variable.parameter.candidate.atoktango"
+                                }
+                            ]
                         }
                     },
                     "match": "^([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+([^\t]*+)\t?+((?:[^\t]*+\t?+){0,5})",
@@ -92,7 +107,7 @@
         "yomi": {
             "patterns": [
                 {
-                    "match": "(?<=^)[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]*+(?=$|\t)",
+                    "match": "(?<=^)[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ#$%&’*+/:;<=>@¥^_`~·＃＄％＆＇＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ#$%&’*+/:;<=>@¥^_`~·＃＄％＆＇＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]{0,31}(?=$|\t)",
                     "name": "string.yomi.atoktango"
                 }
             ]
@@ -100,7 +115,7 @@
         "yomi_after_vertical_bar": {
             "patterns": [
                 {
-                    "match": "(?<=[|｜])[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ＃＄％＆’＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]*+(?=$|\t)",
+                    "match": "(?<=[|｜])[ぁ-んァ-ヶｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ#$%&’*+/:;<=>@¥^_`~·＃＄％＆＇＊＋／：；＜＝＞＠￥＾＿｀〜・−][ぁ-んァ-ヴｦ-ﾝ0-9０１２３４５６７８９a-zA-Zａ-ｚＡ-Ｚ#$%&’*+/:;<=>@¥^_`~·＃＄％＆＇＊＋ー゛゜／：；＜＝＞＠￥＾＿｀〜・−]{0,31}(?=$|\t)",
                     "name": "string.yomi.atoktango"
                 }
             ]
