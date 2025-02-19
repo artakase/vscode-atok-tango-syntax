@@ -2,7 +2,7 @@
   "name": "atok-tango-syntax",
   "displayName": "ATOK Tango Syntax",
   "description": "ATOK 単語・用例ファイル用シンタックス",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "publisher": "artakase",
   "author": {
     "name": "TAKASE Arihiro"
