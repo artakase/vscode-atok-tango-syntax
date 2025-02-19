@@ -11,3 +11,8 @@ insert_final_newline = true
 [package.json]
 indent_style = space
 indent_size = 2
+
+[test/*.txt]
+end_of_line = crlf
+charset = utf-16be
+indent_style = tab

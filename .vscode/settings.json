@@ -3,5 +3,8 @@
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.formatOnSave": true
     },
+    "files.associations": {
+        "**/test/*.txt": "atoktango"
+    },
     "json.format.keepLines": true
 }
