@@ -47,6 +47,12 @@
         "aliases": [ "ATOK Tango", "atoktango" ],
         "configuration": "./language-configuration.json"
       }
+    ],
+    "snippets": [
+      {
+        "language": "atoktango",
+        "path": "./snippets/atoktango.json"
+      }
     ]
   }
 }

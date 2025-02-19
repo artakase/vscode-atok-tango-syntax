@@ -1,0 +1,14 @@
+{
+    "Tango Header": {
+        "isFileTemplate": true,
+        "prefix": "!!ATOK_TANGO_TEXT_HEADER_1",
+        "body": "!!ATOK_TANGO_TEXT_HEADER_1",
+        "description": "ATOK 単語ファイルの先頭行。"
+    },
+    "Yorei Header": {
+        "isFileTemplate": true,
+        "prefix": "!!ATOK_YOREI_TEXT_HEADER_1",
+        "body": "!!ATOK_YOREI_TEXT_HEADER_1",
+        "description": "ATOK 用例ファイルの先頭行。"
+    }
+}
