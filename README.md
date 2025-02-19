@@ -2,6 +2,10 @@
 
 VS Code 用 ATOK 単語ファイルおよび用例ファイルのシンタックスハイライトです。
 
+![screenshot_tango](https://raw.githubusercontent.com/artakase/vscode-atok-tango-syntax/main/images/screenshot_tango.png)
+
+![screenshot_yorei](https://raw.githubusercontent.com/artakase/vscode-atok-tango-syntax/main/images/screenshot_yorei.png)
+
 ## 使い方
 
 ATOK 単語ファイルまたは用例ファイルを開き、言語モードから `ATOK Tango` を選択してください。
